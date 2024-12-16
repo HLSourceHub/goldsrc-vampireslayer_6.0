@@ -1,0 +1,14 @@
+// overview description file for vs_bavaria_ctc.bsp
+
+global 
+{
+	ZOOM	1.40
+	ORIGIN  698 -1996 -1030.50
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_bavaria_ctc.bmp"
+	HEIGHT	-1671
+}

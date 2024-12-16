@@ -1,0 +1,14 @@
+// overview description file for vs_feint.bsp
+
+global 
+{
+	ZOOM	1.84
+	ORIGIN	-309.88 -608 -593
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_feint.bmp"
+	HEIGHT	-200
+}

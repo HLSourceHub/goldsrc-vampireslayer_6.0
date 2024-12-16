@@ -1,0 +1,14 @@
+// overview description file for vs_school.bsp
+
+global 
+{
+	ZOOM	2.9
+	ORIGIN	969 	-1867.13	-510
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_school.bmp"
+	HEIGHT	-1000
+}

@@ -1,0 +1,33 @@
+Precache { 
+ model = sprites/fire_pu.spr
+}
+
+script fire1-p {
+ TempSprite {
+ rate = 0.175
+ dir = { rv( -5,5 ) , rv( -5,5 ) , rv( 0,10 ) }
+ scale = rv( 0.25,0.35 )
+ model = sprites/fire_pu.spr
+ rendermode = TransAdd
+ a = 1
+ life = rv( 0.15,0.9 )
+  }
+}
+
+Script fog {
+  Fog {
+    color = { 85,80,90 }
+    start = 5
+    end = 4300
+    fade = 0.2
+  }
+}
+
+Script fog-innen { 
+ Fog {
+ colour = { 85,80,90 }
+ start = -5
+ end = -200
+ fade = 0.2
+  }
+}

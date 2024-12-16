@@ -1,0 +1,14 @@
+// overview description file for vs_raven.bsp
+
+global 
+{
+	ZOOM	1.46
+	ORIGIN	-1615.94 -275.00 -353
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_raven.bmp"
+	HEIGHT	-353
+}

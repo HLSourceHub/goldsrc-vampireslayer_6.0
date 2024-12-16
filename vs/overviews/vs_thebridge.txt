@@ -1,0 +1,14 @@
+// overview description file for vs_thebridge.bsp
+
+global 
+{
+	ZOOM	1.30
+	ORIGIN	544 	-208.7	448
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_thebridge.bmp"
+	HEIGHT	0
+}

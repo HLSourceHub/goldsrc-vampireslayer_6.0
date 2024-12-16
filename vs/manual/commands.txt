@@ -1,0 +1,41 @@
+This is a list of the  Vampire Slayer Client/Server Console Commands and the defaults.
+
+
+//client commands
+"cl_numgibs","8"
+"cl_burngibs","1"
+"cl_burntime","3"
+"cl_burnrate","0.1"
+cl_reloadefx
+cl_enableefx
+cl_smokepuffs  	1
+cl_bulletsparks	1
+
+//server settings
+"mp_maxfatherd",	"6"
+"mp_maxmolly"  ,	"6"
+"mp_maxeightball",	"6"
+"mp_maxlouis"  ,	"6"
+"mp_maxedgar"  ,	"6"
+"mp_maxnina"   ,	"6"
+"mp_decap",		"1"
+"mp_decaptime",		"60"
+"mp_autobalance",	"1"
+"mp_tkkill",		"0"
+"mp_roundlimit",	"10"
+"mp_roundtime",		"3"
+"mp_maxbots",		"0"
+"mp_minbots",		"0"
+"mp_botteam",		"0"
+"mp_timelimit",		"30"
+"mp_friendlyfire",	"0"
+
+//server commands
+sv_restartround		- restart round now
+sv_restart   		- same as above
+
+
+//voice comms
+sv_alltalk
+voice_modenable", "1",
+sv_voiceenable "1"

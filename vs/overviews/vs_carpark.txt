@@ -1,0 +1,14 @@
+// overview description file for vs_carpark.bsp
+
+global 
+{
+	ZOOM	2.07
+	ORIGIN	1598.06 -1719.06 -1505
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_carpark.bmp"
+	HEIGHT	-1505
+}

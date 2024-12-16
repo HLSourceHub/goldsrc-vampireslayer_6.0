@@ -1,0 +1,17 @@
+CLASS: Slayer
+
+WEAPONS:
+
+STAKE AND CRUCIFIX 
+PUMP ACTION SHOTGUN
+DOUBLE BARREL SHOTGUN
+
+HOW TO PLAY:
+
+Knock Vampires down using a shotgun then stake the
+body to kill them completely. Use the secondary attack
+with STAKE selected to become immune to Vampire 
+attacks while Father D is speaking. To change team
+press ENTER whilst dead.
+
+QUOTE: "I kick ass for The Lord!"

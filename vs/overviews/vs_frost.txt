@@ -1,0 +1,14 @@
+// overview description file for vs_frost.bsp
+
+global 
+{
+	ZOOM	1.31
+	ORIGIN	-272 -288 336
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_frost.bmp"
+	HEIGHT	-129
+}

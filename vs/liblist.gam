@@ -1,0 +1,12 @@
+game "VampireSlayer"
+url_info "www.vsmod.com"
+version "VI"
+svonly "0"
+cldll "1" 
+hlversion "1110"
+type "multiplayer_only"
+nomodels "1"
+mpentity "info_player_deathmatch"
+gamedll "dlls\mp.dll"
+gamedll_linux "dlls/vs_i386.so"
+

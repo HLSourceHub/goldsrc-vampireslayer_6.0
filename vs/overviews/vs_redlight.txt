@@ -1,0 +1,14 @@
+// overview description file for vs_redlight.bsp
+
+global 
+{
+	ZOOM	1.36
+	ORIGIN	541.05 	1123.41   -16.00
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_redlight.bmp"
+	HEIGHT	-750
+}

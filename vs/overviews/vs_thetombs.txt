@@ -1,0 +1,13 @@
+
+global 
+{
+	ZOOM	1.53
+	ORIGIN	-1132.0 -328.0 -472.0
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_thetombs.bmp"
+	HEIGHT	-1000
+}

@@ -1,0 +1,382 @@
+;;
+;;  The effects are enabled by default but they can be disabled on 
+;;   the client by setting the client variable "cl_enableefx 0"
+;;
+;;  There is a client variable "cl_reloadefx" which you can use to 
+;;   reload the efx scripts without exiting the game. 
+;;
+;;  When making new efx scripts bind the command "cl_reloadefx 1" 
+;;   to a key and run Vampire-Slayer in a window. You can then make
+;;   changes to your efx script in your favourite editor and see
+;;   the results instantly in the game with a single key press.
+;;
+;; NB: There is a bug in the efx file parser which means you
+;;      must leave a space or ',' between each keyword and around 
+;;      brackest () and braces {}. This may be fix in the future but 
+;;	if you just follow the example scripts you'll be just fine :P
+;;
+;; So the question you all asking is why should I use these scripts
+;;  rather than just putting the efx in using worldcraft. The the good
+;;  news is there are a number of reasions.
+;; 1) These efx are all processed client side which means less network
+;;     traffic and there for less 'lag' than server based effects
+;; 2) Save time tweaking effects, because the effect is defined in a
+;;     seperate file you DO NOT need to recompile the map to change an 
+;;     effect
+;; 3) The script allows for greater variation of effects at run time 
+;;     by allowing ranges to be used as parameters. This is a subtle 
+;;     yet powerfull feature. A smoke effect done in worldcraft would 
+;;     have all the smoke particles the same size and moving in the same 
+;;     direction at the same speed. Using the effects script each smoke
+;;     particle could have a unique size, direction and speed, giving
+;;     much more natural effects.
+;;
+;;
+;; The commands
+;;
+;; Precache - All sprites, models and sounds must be listed
+;;             in the precache section otherwise they will
+;;             not appear in the efx
+;;
+;; Script <name> - Defines a new script called <name>. This
+;;                  is the what you set as the "Efx Script"
+;;                  parameter in a "env_efx" entity.
+;;
+;; Efx parameter types
+;; num         - number
+;;    3142              fixed integer value
+;;    3.142             fixed floating point value
+;;    rv( 0,3.142 )     random value between 0 and 3.142
+;;
+;; vec         - vector
+;;    { 0,0,0 }
+;;    { 0,0,rv( 0,1 ) }
+;;    { rv( 0,1 ),rv( 0,1 ),rv( 0,1 ) }
+;;
+;; col         - colour
+;;    { 255,255,255 }
+;;    { 255,255,rv( 0,255 ) }
+;;    { rv( 0,255 ),rv( 0,255 ),rv( 0,255 ) }
+;;
+;; str        - a text string
+;;    shortstring
+;;    "long string with spaces"
+;;    
+;; <rendermode> - must be one of the following enumeration
+;;    Normal            src
+;;    TransColor        c*a+dest*(1-a)
+;;    TransTexture      src*a+dest*(1-a)
+;;    Glow              src*a+dest -- No Z buffer checks
+;;    TransAlpha        src*srca+dest*(1-srca)
+;;    TransAdd          src*a+dest
+;;
+;; <renderfx>   - must be one of the following enumeration
+;;    None          
+;;    PulseSlow     
+;;    PulseFast     
+;;    PulseSlowWide 
+;;    PulseFastWide 
+;;    FadeSlow      
+;;    FadeFast      
+;;    SolidSlow     
+;;    SolidFast     
+;;    StrobeSlow    
+;;    StrobeFast    
+;;    StrobeFaster  
+;;    FlickerSlow   
+;;    FlickerFast   
+;;    NoDissipation 
+;;    Distort       
+;;    Hologram,     
+;;    DeadPlayer    
+;;    Explode       
+;;    GlowShell     
+;;    ClampMinScale 
+;;
+;; <ftent>	- entity flags
+;;    FTENT_NONE
+;;    FTENT_SINEWAVE
+;;    FTENT_GRAVITY
+;;    FTENT_ROTATE
+;;    FTENT_SLOWGRAVITY
+;;    FTENT_SMOKETRAIL
+;;    FTENT_COLLIDEWORLD
+;;    FTENT_FLICKER
+;;    FTENT_FADEOUT
+;;    FTENT_SPRANIMATE
+;;    FTENT_HITSOUND
+;;    FTENT_SPIRAL
+;;    FTENT_SPRCYCLE
+;;    FTENT_COLLIDEALL
+;;    FTENT_PERSIST
+;;    FTENT_COLLIDEKILL
+;;    FTENT_PLYRATTACHMENT
+;;    FTENT_SPRANIMATELOOP
+;;    FTENT_SPARKSHOWER
+;;    FTENT_NOMODEL
+;;    FTENT_CLIENTCUSTOM
+;;
+;;
+;; Efx functions, there's too many to comment but there's 
+;;  loads of examples so go and experiment
+;;
+;; BlobExplosion { rate = num }
+;; Blood { rate = num, dir = vec, colour = col, speed = num }
+;; BloodStream { rate = num, dir = vec, colour = col, speed = num }
+;; BreakModel { rate = num, dir = vec, random = num, life = num, count = num, model = str, flags = <ftent> }
+;; Bubbles { rate = num, heigt = num, speed = num, model = str, count = num }
+;; Bubbletrail { rate = num, heigt = num, speed = num, model = str, count = num }
+;; BulletImpactParticles { rate = num }
+;; Explosion { rate = num, scale = num, framerate = num, model = str, flags = <ftent> }
+;; FireField { rate = num, radius = num, model = str, count = num, flags = <ftent> }
+;; FlickerParticles { rate = num }
+;; FunnelSprite { rate = num, model = str, reverse = num }
+;; Implosion { rate = num, radius = num, life = num, count = num }
+;; LargeFunnel { rate = num, reverse = num }
+;; LavaSplash { rate = num }
+;; ParticleBox { rate = num, r = num, g = num, b = num, life = num }
+;; ParticleBurst { rate = num, color = col, life = num }
+;; ParticleExplosion { rate = num, colorstart = col, colorlength = num }
+;; RocketFlare { rate = num }
+;; ParticleEffect { rate = vec, color = col, count = num }
+;; Spark { rate = num, count = num, velocityMin = num, velocityMax = num }
+;; SparkShower { rate = num }
+;; SparkStreaks { rate = num, count = num, velocityMin = num, velocityMax = num }
+;; TempModel { rate = num, dir = vec, angles = vec, life = num, model = str, soundtype = num }
+;; TempSprite { rate = num, dir = vec, scale = num, model = str, rendermode = <rendermode>, renderfx = <renderfx>, a = num, life = num, flags = <ftent> }
+;;
+;; Fog { color = col, start = num, end = num, intime = num } 
+;;
+;;
+
+
+Precache {
+;; Sprites
+;;  model = sprites/blood.spr
+;;  model = sprites/blooddrop.spr
+;;  model = sprites/bloodspray.spr
+;;  model = sprites/bubble.spr
+;;  model = sprites/stmbal1.spr
+;;  model = sprites/laserdot.spr
+;;  model = sprites/explode1.spr
+
+  model = sprites/smoke.spr
+  model = sprites/flake.spr
+  model = sprites/fire.spr
+  
+;; Models
+;;  model = models/w_weaponbox.mdl
+
+;; Sounds
+  
+}
+
+;Script Fog1 {
+;  Fog {
+;    color = { 122,192,193 }
+;    start = 500
+;    end = 4000
+;    fade = 5
+;  }
+;}
+
+;Script Fog2 {
+;  Fog {
+;    color = { 225,168,221 }
+;    start = 500
+;    end = 1500
+;    fade = 5
+;  }
+;}
+
+Script test1 {
+  BlobExplosion { 
+    rate = 5
+  }
+}
+
+Script test2 {
+  Blood { 
+    rate = 5
+    dir = { 0,0,0 }
+    colour = { 255,255,255 }
+    speed = 80
+  }
+  BloodStream { 
+    rate = 5
+    dir = { 500,0,100 }
+    colour = { 255,255,255 }
+    speed = 100
+  }
+}
+
+Script test3 {
+;  BreakModel {
+;    rate = 5
+;    dir = { 0,0,100 }
+;    random = 100
+;    life = 3
+;    count = 10
+;    model = models/w_weaponbox.mdl
+;  }
+
+  TempSprite {
+    rate = 0.1
+    dir = { 0,0,1 }
+    scale = 1.0
+    model = sprites/stmbal1.spr
+//    model = sprites/smoke.spr
+//    model = sprites/flake.spr
+    rendermode = TransAdd
+    renderfx = NoDissipation
+    a = 10
+    life = 0
+    FTENT_SPRANIMATE 
+    ;flags = FTENT_SPRANIMATELOOP
+    ;flags = FTENT_SMOKETRAIL 
+    ;flags = FTENT_SPARKSHOWER
+    ;flags = FTENT_SLOWGRAVITY FTENT_COLLIDEKILL
+    ;;flags = FTENT_COLLIDEKILL
+  }
+
+}
+
+Script test4 {
+  Bubbles { 
+    rate = 5
+    height = 200
+    speed = 10
+    model = sprites/bubble.spr
+    count = 3
+  }
+
+;;  BubbleTrail { 
+;;    rate = 5
+;;    height = 200
+;;    speed = -10 
+;;    model = sprites/bubble.spr
+;;    count = 20
+;;  }
+}
+
+Script test5 {
+  BulletImpactParticles { 
+    rate = 1
+  }
+}
+
+Script test6 {
+  Explosion { 
+    rate = 30
+    scale = 1.5
+    framerate = 30
+    model = sprites/explode1.spr
+;    flags = <ftent> 
+  }
+}
+
+Script test7 {
+  FireField { 
+    rate = 10
+    radius = 50
+    model = sprites/explode1.spr
+    count = 20 
+;    flags = <ftent> 
+  }
+}
+
+Script test8 {
+  FlickerParticles { 
+    rate = 0.1
+  }
+}
+
+Script test9 {
+  FunnelSprite { 
+    rate = 0.01
+    model = sprites/laserdot.spr
+    reverse = 0
+  }
+}
+
+Script test10 {
+  Implosion { 
+    rate = 5, 
+    radius = 50, 
+    life = 2, 
+    count = 100
+  }
+}
+
+Script test11 {
+  LavaSplash { 
+    rate = 5
+  }
+}
+
+Script test12 {
+  Spark {
+    rate = 0.1
+    count = 50
+    velocityMin = 1
+    velocityMax = 10
+  }
+}
+
+Script test13 {
+  SparkShower { 
+    rate = 0.2
+  }
+}
+
+Script test14 {
+  SparkStreaks {
+    rate = 0.01
+    count = 50
+    velocityMin = 1
+    velocityMax = 10
+  }
+}
+
+Script test15 {
+  TempModel {
+    rate = 5
+    dir = { 0,0,100 }
+    life = 3
+    model = models/w_weaponbox.mdl
+  }
+}
+
+Script test16 {
+  TempSprite {
+    rate = 0.02
+    dir = { 0,0,-70.0 }
+    scale = 0.1
+    model = sprites/stmbal1.spr
+;;    model = sprites/bubble.spr
+    rendermode = TransAdd
+;;    rendermode = TransAlpha
+    renderfx = NoDissipation
+    a = 1
+    life = 3
+    ;;flags = FTENT_SPARKSHOWER
+    flags = FTENT_SLOWGRAVITY FTENT_COLLIDEKILL
+    ;;flags = FTENT_COLLIDEKILL
+  }
+}
+
+
+Script snow {
+  TempSprite {
+    rate = 0.01
+    dir = { 0,0,-70.0 }
+    scale = 0.1
+    model = sprites/flake.spr
+    rendermode = TransAdd
+    renderfx = NoDissipation
+    a = 1
+    life = 3
+    flags = FTENT_COLLIDEWORLD FTENT_COLLIDEKILL FTENT_SLOWGRAVITY 
+    ;;flags = FTENT_COLLIDEKILL
+  }
+}

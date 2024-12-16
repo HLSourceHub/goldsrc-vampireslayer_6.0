@@ -1,0 +1,14 @@
+// overview description file for vs_desolation.bsp
+
+global 
+{
+	ZOOM	1.75
+	ORIGIN	-352.00   928.00   -1.00 
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_desolation.bmp"
+	HEIGHT	-1.00
+}

@@ -1,0 +1,14 @@
+// overview description file for vs_bike.bsp
+
+global 
+{
+	ZOOM	1.16
+	ORIGIN	-9.06 -359.13 -192.00
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_bike.bmp"
+	HEIGHT	-864
+}

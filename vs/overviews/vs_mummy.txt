@@ -1,0 +1,14 @@
+// overview description file for vs_mummy.bsp
+
+global 
+{
+	ZOOM	2.22
+	ORIGIN	-345.95 956.84   128.00
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_mummy.bmp"
+	HEIGHT	-250
+}

@@ -1,0 +1,14 @@
+// overview description file for vs_jailhouse.bsp
+
+global 
+{
+	ZOOM	2.37
+	ORIGIN	-64 -40 -300
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_jailhouse.bmp"
+	HEIGHT	-225
+}

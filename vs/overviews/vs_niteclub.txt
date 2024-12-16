@@ -1,0 +1,14 @@
+// overview description file for vs_niteclub.bsp
+
+global 
+{
+	ZOOM	2.62
+	ORIGIN	-150 	-13.5	32
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_niteclub.bmp"
+	HEIGHT	-500
+}

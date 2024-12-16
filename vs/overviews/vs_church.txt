@@ -1,0 +1,14 @@
+// overview description file for vs_church.bsp
+
+global 
+{
+	ZOOM	1.37
+	ORIGIN	-229.75 -243.81	-2561
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_church.bmp"
+	HEIGHT	-2275
+}

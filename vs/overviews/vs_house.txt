@@ -1,0 +1,13 @@
+
+global 
+{
+	ZOOM	2.41
+	ORIGIN	1032 -64.0 -817
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_house.bmp"
+	HEIGHT	-817
+}

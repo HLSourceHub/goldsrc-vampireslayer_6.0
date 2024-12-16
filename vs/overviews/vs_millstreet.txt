@@ -1,0 +1,14 @@
+// overview description file for vs_millstreet.bsp
+
+global 
+{
+	ZOOM	1.68
+	ORIGIN	1334.44 	-128.0	31.50
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_millstreet.bmp"
+	HEIGHT	-1000
+}

@@ -1,0 +1,14 @@
+// overview description file for vs_station.bsp
+
+global 
+{
+	ZOOM	1.86
+	ORIGIN	-919.9 	2323	584
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_station.bmp"
+	HEIGHT	0
+}

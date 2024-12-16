@@ -1,0 +1,17 @@
+Precache {
+  model = sprites/flake.spr
+}
+
+Script snow {
+  TempSprite {
+    rate = 0.01
+    dir = { 0,0,-70.0 }
+    scale = 0.1
+    model = sprites/flake.spr
+    rendermode = TransAdd
+    renderfx = NoDissipation
+    a = 1
+    life = 3
+    flags = FTENT_COLLIDEWORLD FTENT_COLLIDEKILL FTENT_SLOWGRAVITY 
+  }
+}

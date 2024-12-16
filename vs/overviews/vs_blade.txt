@@ -1,0 +1,14 @@
+// overview description file for vs_blade.bsp
+
+global 
+{
+	ZOOM	1.34
+	ORIGIN	474.0 	-993.88	972.0
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_blade.bmp"
+	HEIGHT	-1000
+}

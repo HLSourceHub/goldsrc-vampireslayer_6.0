@@ -1,0 +1,14 @@
+// overview description file for vs_quaint.bsp
+
+global 
+{
+	ZOOM	1.36
+	ORIGIN	-112 368 -305
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_quaint.bmp"
+	HEIGHT	-305
+}

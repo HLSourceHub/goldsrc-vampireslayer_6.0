@@ -1,0 +1,14 @@
+// overview description file for vs_carnival.bsp
+
+global 
+{
+	ZOOM	1.23
+	ORIGIN	-896.0 440.0 -321
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_carnival.bmp"
+	HEIGHT	-321
+}

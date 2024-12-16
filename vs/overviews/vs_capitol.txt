@@ -1,0 +1,14 @@
+// overview description file for vs_capitol.bsp
+
+global 
+{
+	ZOOM	1.75
+	ORIGIN	-256 -227.34 456
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_capitol.bmp"
+	HEIGHT	-625
+}

@@ -1,0 +1,14 @@
+// overview description file for vs_yamamansion.bsp
+
+global 
+{
+	ZOOM	1.94
+	ORIGIN	156 1599 -175
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_yamamansion.bmp"
+	HEIGHT	-200
+}

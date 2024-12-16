@@ -1,0 +1,80 @@
+Precache {
+;; Sprites
+  model = sprites/fire.spr
+  model = sprites/vssmoke.spr
+}
+
+script global {
+  Fog {
+    color = { 25,25,25 }    
+    start = 100
+    end = 1300
+    fade = 3
+  }  
+}
+
+script flamepost {
+  ;; Flame
+  TempSprite {
+    rate = 0.01
+    dir = { rv( -10,10 ),rv( -10,10 ),rv( 65,75 ) }
+    scale = rv( 0.1,0.2 )
+    model = sprites/fire.spr
+    rendermode = TransAdd
+    a = 1
+    life = rv( 0.2,0.3 )
+  }
+  
+  ;; Smoke
+  TempSprite {
+    rate = 0.1
+    dir = { rv( -10,10 ),rv( -10,10 ),rv( 65,75 ) }
+    scale = rv( 1.0,1.5 )
+    model = sprites/vssmoke.spr
+    rendermode = TransTexture
+    renderfx = None
+    a = 120
+    life = rv( 1.8,2.2 )
+    flags = FTENT_SPRANIMATE
+  }
+}
+
+script housefire {
+
+  ;; Flame
+  TempSprite {
+    rate = 0.03
+    dir = { rv( -5,5 ),rv( -5,5 ),rv( 6,10 ) }
+    scale = rv( 0.6,0.8 )
+    model = sprites/fire.spr
+    rendermode = TransAdd
+    a = 1
+    life = rv( 0.4,0.5 )
+  }
+
+  ;; Smoke  
+  TempSprite {
+    rate = 0.1
+    dir = { rv( -26,-23 ),rv( -5,5 ),rv( 65,75 ) }
+    scale = rv( 0.9,1.1 )
+    model = sprites/vssmoke.spr
+    rendermode = TransTexture
+    renderfx = None
+    a = 120
+    life = rv( 1.8,2.2 )
+    flags = FTENT_SPRANIMATE
+  }
+}
+
+script lampflame {
+  ;; Flame
+  TempSprite {
+    rate = 0.2
+    dir = { rv( -3,3 ),rv( -3,3 ),rv( 6,10 ) }
+    scale = rv( 0.3,0.4 )
+    model = sprites/fire.spr
+    rendermode = TransAdd
+    a = 1
+    life = rv( 0.5,0.8 )
+  }
+}

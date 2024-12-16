@@ -1,0 +1,14 @@
+// overview description file for vs_noir_ctc.bsp
+
+global 
+{
+	ZOOM	1.59
+	ORIGIN	851.50 -134.59 32
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_noir_ctc.bmp"
+	HEIGHT	-260
+}

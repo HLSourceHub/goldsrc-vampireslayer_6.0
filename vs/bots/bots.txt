@@ -1,0 +1,75 @@
+Vampire Slayer : Bots
+
+The Bots have been developed using Bot Man's BotSDK, which provides an excellent framework leaving me much more time to concentrate on the mod specific code and AI. So big thanks to Bot Man for the many hours of my life saved :)=
+
+I would describe the bots in Vampire Slayer : Chapter III as a good first beta release. Their behavior is best described as simple but good enough for many maps. The bots can be good practice for one player but the more human players in the server the better the bots will be especially if the number of human players is greater than the number of bots. 
+
+Routetwo has added a bot forum (http://www.planethalflife.com/vampire/forum/) where you will be able to swap waypoints and bot tips etc. I'll be using this forum to put together a FAQ for all things bot related.
+
+Bot Map Ratings
+
+:) vs_yamamansion  - A most excellent map for large numbers of bots.
+:| vs_capitol - Big ladders and some difficult jumps means some areas are difficult for the bots to reach.
+:| vs_niteclub - Some problem areas round the bars and ladders.
+:) vs_cemetery - Bring it on.
+:) vs_quaint - Even the bots cannot deny the fun that is quaint.
+:| vs_lynch - A nice simple map but with less players than bot the rounds become a little repetitive.
+:) vs_hotel - The spread out vampire spawns points means the bots take many different routes through the map rather than the usual large mob attack.
+:) vs_asylum - Insane.
+:) vs_thebridge - Another simple but really quite fun map.
+:( vs_school - Don't expect the bots to engage in the classic roof to roof net play.
+:) vs_millstreet - The bots tend to gather in the living rooms (maybe they like TV) but with a few humans it plays much better.
+:| vs_church - Problems with the bell tower but just don't go there.
+:) vs_station - Needs a few humans otherwise it get a little repetitive.
+:) vs_carpark - minor ladder trauma but a blood bath none the less.
+:) vs_house - Problems with the coffins but a maze of death & blood.
+:) vs_blade - As seen on the big screen.
+:) vs_feint - Great!! One of the most playable and no ladders.
+
+Advanced Server Options & Variables
+
+Min Bots (server variable mp_minbots) - The server will add at least this many bots.
+Max Bots (mp_maxbots) - The server will add up to this many bots. When mp_maxbots > mp_minbots the server will auto kick bots as real players joint the server
+Bot Team (mp_botteam) - Auto (0) Bots will joint the team with the least players. Vampire (1) or Slayer (2) Bots will join the specified team. Good to co-op & team practice.
+
+The add bot console command
+vsbot add {team[vampire|slayer]} {class[fatherd|molly|louis|edgar|nina]} {name} {skill[0-5]}
+eg. 
+vsbot add
+vsbot add pinback
+vsbot add pinback vampire
+vsbot add fatherd pinback 3
+
+Waypoint Menu & Console Commands
+vsbot waypoint menu - Display the waypoint menu. Using this menu you can fully edit a maps waypoint. The menu commands can also be individually bound to key for you HL power users :).
+
+Waypoint Menu - (vsbot waypoint menu)
+1. Edit Menu - Waypoint editing menu
+2. Tags Menu - Waypoint tag menu
+3. Path Menu - Waypoint path menu
+4. Load - Load waypoint file
+5. Save - Save waypoint file
+
+Edit Menu - (vsbot waypoint menu 2)
+1. On/Off - (vsbot waypoint on|off) Toggle waypoint display on|off
+2. Auto On/Off - (vsbot autowaypoint on|off) Toggle autowaypoint placement on|off. With autowaypoint on waypoints will be dropped a regular intervals.
+3. Add - (vsbot waypoint add) Add a waypoint at the current location.
+4. Delete - (vsbot waypoint delete) Delete the nearest waypoint.
+
+Tags Menu - (vsbot waypoint menu 3)
+1. Vampire Only - This waypoint can only be used by vampires
+2. Slayer Only - This waypoint can only be used by vampires. This is automatically set when a waypoint is in sunlight.
+3. Door - This hints to a bot that the waypoint is near a door.
+4. Breakable - This hints to a bot that the waypoint is near a breakable entity.
+
+Path Menu - (vsbot waypoint menu 4)
+1. On/Off - (vsbot pathwaypoint on|off) Toggle waypoint paths on|off.
+2. Create from - (vsbot pathwaypoint create 1) Start creating a path from the nearest waypoint.
+3. Create to - (vsbot pathwaypoint create 2) Finish creating a path to the nearest waypoint (obviously you need to move between the waypoints you are trying to path).
+4. Remove from - (vsbot pathwaypoint remove 1) Start removing a path from the nearest waypoint.
+5. Remove to - (vsbot pathwaypoint remove 2) Finish removing a path to the nearest waypoint (obviously you need to move between the waypoints you are trying to path).
+
+Vsbot waypoint info - Display info about the nearest waypoint. (there wasn't room on the menu for this one!)
+
+rich.
+

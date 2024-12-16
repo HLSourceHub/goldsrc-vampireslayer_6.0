@@ -1,0 +1,14 @@
+// overview description file for vs_hotel.bsp
+
+global 
+{
+	ZOOM	2.45
+	ORIGIN	-56 150 -2985
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_hotel.bmp"
+	HEIGHT	-2985
+}

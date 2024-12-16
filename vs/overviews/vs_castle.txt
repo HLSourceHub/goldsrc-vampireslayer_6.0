@@ -1,0 +1,13 @@
+
+global 
+{
+	ZOOM	1.88
+	ORIGIN	-512.0 736.0 1252.0
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_castle.bmp"
+	HEIGHT	460
+}

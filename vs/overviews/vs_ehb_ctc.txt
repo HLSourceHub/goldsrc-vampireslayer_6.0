@@ -1,0 +1,14 @@
+// overview description file for vs_ehb_ctc.bsp
+
+global 
+{
+	ZOOM	1.82
+	ORIGIN	-238.05	-423.86 128
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_ehb_ctc.bmp"
+	HEIGHT	-220
+}

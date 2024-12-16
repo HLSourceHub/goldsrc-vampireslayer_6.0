@@ -1,0 +1,371 @@
+<html>
+<!-- #BeginTemplate "/Templates/Copy of vstemplate.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>Untitled Document</title>
+<link rel="stylesheet" href="vsstyle.css" type="text/css">
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript">
+<!--
+
+
+
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v3.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : args[i+1];
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    if ((nbArr = document[grpName]) != null)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = args[i+1];
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+<style type="text/css">
+<!--
+.unnamed1 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; font-style: normal; color: #FFFFFF}
+a {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-small; font-style: normal; color: #FFFFCC}
+-->
+</style>
+</head>
+<body bgcolor="#080400" text="#660000">
+<table width="700" border="0" cellpadding="0" cellspacing="0" align="center">
+  <tr> 
+    <td valign="top" height="141" colspan="5" bgcolor="#000000"> 
+      <p><img src="Templates/banner_top.jpg" width="700" height="141"></p>
+    </td>
+  </tr>
+  <tr> 
+    <td height="66" valign="top" colspan="5"><img src="Templates/vs.jpg" width="700" height="66"></td>
+  </tr>
+  <tr> 
+    <td height="38" valign="top" colspan="5" bgcolor="#000000" align="center"><img src="Templates/mod.jpg" width="371" height="35"></td>
+  </tr>
+  <tr bgcolor="#000000"> 
+    <td height="35" valign="top" colspan="5">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="1266" width="128" valign="top" background="Templates/cf_m_mrbl1.jpg"> 
+      <!-- #BeginEditable "left" --><!-- #EndEditable --></td>
+    <td width="8" valign="top"> <!-- #BeginEditable "left1" --> 
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000000">
+        <tr> 
+          <td width="8" height="1266"></td>
+        </tr>
+      </table>
+      <!-- #EndEditable --></td>
+    <td width="428" valign="top" bgcolor="#000000"> <!-- #BeginEditable "m" --> 
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000000">
+        <tr> 
+          <td width="428" height="235" valign="top" class="text">
+            <p>Important Links:</p>
+            <p>Hompage: <a href="http://www.planethalflife.com/vampire">http://www.vsmod.com</a></p>
+            <p>Forum : <a href="http://www.planethalflife.com/vampire/forum">http://www.planethalflife.com/vampire/forum</a><br>
+              (visit the forum for help, support, using the bots, mapping, modelling 
+              for vs)</p>
+            <p>Manual Online: <a href="http://www.planethalflife.com/vampire/manual/manual.htm">http://www.planethalflife.com/vampire/manual/manual.htm</a></p>
+            <p>Bots Info: <a href="http://www.planethalflife.com/vampire/bots/bots.htm">http://www.planethalflife.com/vampire/bots/bots.htm</a></p>
+            <p><span class="text">Overview </span> </p>
+            <p class="unnamed1"><span class="text">VampireSlayer is a modification 
+              to Half-Life by Valve Software. The basic premise was to pit two 
+              teams of players against one another, where one side (Vampires) 
+              have better physical attributes (running, jumping, close attack) 
+              against the Slayers, who have weapons. The Vampire myth lends itself 
+              to other playability ideas, such as staking, drinking blood to recover 
+              health, etc. The myth also lends itself to interesting settings 
+              for maps. </span></p>
+            <p class="unnamed1"><span class="text">The game is played in rounds, 
+              once you are dead you must wait until the next round starts. This 
+              shouldn't be too long and there are 'observer camera' modes for 
+              you to follow the remaining action. </span></p>
+            <p class="unnamed1">&nbsp; </p>
+            <p class="large_text"><span class="text">Getting Started </span></p>
+            <p class="unnamed1"><span class="text">To activate VampireSlayer, 
+              you go to start Half-Life as normal and then choose 'Custom Game' 
+              from the menu. You will see an entry for VampireSlayer, click this 
+              and then click 'activate'. You can then go back to normal Half-Life 
+              menus although the style should look different if VS has been activated. 
+              Alternatively, double click the desktop icon created during installation.</span></p>
+            <p>&nbsp;</p>
+            <p class="large_text"><span class="text">Controls </span></p>
+            <p class="unnamed1"><span class="text">VS uses the same key configuration 
+              as normal Half-Life, so there should be no extra control configuration 
+              to do, however, you should still go to 'configuration/controls' 
+              to set up your keys after you have installed VS. </span></p>
+            <p class="unnamed1"><span class="text">Vampires use claw attack all 
+              the time and don't need to change weapons. </span></p>
+            <p class="unnamed1"><span class="text">Vampire &quot;Feed&quot; key 
+              is the same as your Half-Life &quot;Use&quot; key. </span></p>
+            <p class="unnamed1"><span class="text">Vampire &quot;Leap&quot; is 
+              done using Forward+Crouch+Jump. Similar to the JumpPack in Half-Life. 
+              </span></p>
+            <p class="unnamed1"><span class="text">Vampires can 'sense' slayers 
+              using the secondary attack button. </span></p>
+            <p>&nbsp; </p>
+            <p class="large_text"><span class="text">Joining </span></p>
+            <p class="unnamed1"><span class="text">When you first join a game, 
+              whether you've started a LAN/Bot game or you've joined a server 
+              on the internet, you will have to choose a team. </span></p>
+            <p class="unnamed1"><span class="text">You can pick using the mouse 
+              or press the number key for the menu item. </span></p>
+            <p class="unnamed1"><span class="text">The team choices are Vampire 
+              or Slayer. Once you have chosen a team, you can then choose a character 
+              to play. </span></p>
+            <p class="unnamed1"><span class="text">Once you're character has been 
+              chosen, if there is a game in progress, you may be put into observer 
+              mode until the start of the next round. </span></p>
+            <p>&nbsp; </p>
+            <p class="large_text"><span class="text">Teams/Characters </span></p>
+            <p class="unnamed1"><span class="text">The Vampires' Louis, Edgar 
+              and Nina have the same phsyical attributes, but each has a special 
+              unique ability on the 'secondary fire' button. </span></p>
+            <p class="unnamed1"><span class="text2">Louis</span><span class="text"> 
+              - SilentLeap, Nightvision, good for dark maps </span></p>
+            <p class="unnamed1"><span class="text2">Edgar</span><span class="text"> 
+              - Stealth - doesn't last long so use it just before you attack. 
+              </span></p>
+            <p class="unnamed1"><span class="text2">Nina</span><span class="text"> 
+              - Sunlight Immunity - again, it doesn't last long but use it before 
+              you venture into the sunlight to attack any slayers. </span></p>
+            <p class="unnamed1"><span class="text2">Father D</span><span class="text"> 
+              starts each round with a shotgun, double barrel shotgun and stake. 
+              </span></p>
+            <p class="unnamed1"><span class="text">The secondary attack when Father 
+              D has his stake and crucifix selected gives him a few seconds of 
+              immunity to vampire attacks. This only works when he has the crucifix 
+              out AND he is speaking the Holy words. </span></p>
+            <p class="unnamed1"><span class="text2">Molly </span><span class="text">starts 
+              each round with a crossbow, micro-Uzi submachine gun and stake and 
+              Colt Governement pistol combinatio</span></p>
+            <p class="unnamed1"><span class="text">When using the Stake and Colt, 
+              the primary attack uses the Stake weapon and the secondary attack 
+              fires the Colt Pistol. </span></p>
+            <p class="unnamed1"><span class="text">There is nothing to stop Father 
+              D picking up a crossbow left by a dead Molly though! </span></p>
+            <p class="text"><span class="text2">Eightball</span> starts each round 
+              with a Winchester Rifle (with zoom) and a ThunderFive Pistol (a 
+              pistol that fires shotgun ammo and is good at short range only). 
+              He uses a broken pool cue to stake vampire. The cue can also be 
+              used to knock vampires away by usingg the secondary attack.</p>
+            <p class="unnamed1"><span class="text">Vampires cannot pick up weapons 
+              blessed by Slayers. </span></p>
+            <p class="unnamed1"><span class="text">If a Vampire is knocked out 
+              out by bullets, the undead creature will rise after a short time. 
+              This is your chance to stake him whilst he's down if you are a Slayer, 
+              but be careful 'cos he may rise just before you get to him! </span></p>
+            <p class="unnamed1"><span class="text">If a Vampire manages to ressurrect, 
+              and escapes being staked, he may look for a dead body to feed off 
+              to recover his health up to full. Vampires can feed off dead slayers 
+              by standing or crouching near the body and pressing the &quot;Use&quot; 
+              key. </span></p>
+            <p>&nbsp;</p>
+            <p class="large_text"><span class="text">HUD </span></p>
+            <p class="unnamed1"><span class="text">The HUD in VS is straightforward. 
+              The bottom left is your current health. </span></p>
+            <p class="unnamed1"><span class="text">In the bottom center is the 
+              time remaining for this round. If the timer runs out it is a draw. 
+              At the moment the win criteria for a round is to kill all of the 
+              opposite team. </span></p>
+            <p class="unnamed1"><span class="text">When you are dead the hud switches 
+              to an observer mode where you can view the remaining action, control 
+              the camera and view the remaining time for the current round. </span></p>
+            <p class="unnamed1"><span class="text">If you are a vampire there 
+              is an extra icon that shows the charge status of your special ability. 
+              If it's bright red it means it's ready to use, if it's white it 
+              means it is in use. Other than that it means it charging, you will 
+              see the line move slowly up the icon as it charges. </span></p>
+            <p class="unnamed1"><span class="text">FatherD also has a charge icon 
+              for his 'Pray' ability but it is only displayed when you have the 
+              stake &amp; crucifix deployed. </span></p>
+            <p>&nbsp; </p>
+            <p class="large_text"><span class="text">Weapons </span></p>
+            <p class="unnamed1"><span class="text">The current weapons in VS are: 
+              </span></p>
+            <p class="text"><span class="text2">Mossberg Pump Action Shotgun: 
+              </span></p>
+            <p class="unnamed1"><span class="text">Primary: single buckshot blast. 
+              </span></p>
+            <p class="unnamed1"><span class="text">Secondary: two rounds of buckshot, 
+              inaccurate </span></p>
+            <p class="text"><span class="text2">Double Barrel Shotgun (Hunting 
+              Rounds): </span></p>
+            <p class="unnamed1"><span class="text">Primary: Fires first barrel. 
+              </span></p>
+            <p class="unnamed1"><span class="text">Secondary: Fires second barrel. 
+              </span></p>
+            <p class="unnamed1"><span class="text">Hint: Press both buttons together.</span></p>
+            <p class="text"><span class="text2">Micro-Uzi SubMachineGun: </span></p>
+            <p class="unnamed1"><span class="text">Primary: Fire. </span></p>
+            <p class="unnamed1"><span class="text">Secondary: N/A </span></p>
+            <p class="text"><span class="text2">Stake Crossbow: </span></p>
+            <p class="unnamed1"><span class="text">Primary: Fire (instant Vampire 
+              kill with a heart/chest shot). </span></p>
+            <p class="unnamed1"><span class="text">Secondary: Medium Zoom in/out. 
+              </span></p>
+            <p class="text"><span class="text2">Stake And Colt Government Pistol: 
+              </span></p>
+            <p class="unnamed1"><span class="text">Primary attack: Stake does 
+              an instant Vampire kill if the Vampire is down. </span></p>
+            <p class="unnamed1"><span class="text">Minor damage if Vampire is 
+              standing, but it will still kill if it takes the Vampires health 
+              to zero. </span></p>
+            <p class="unnamed1"><span class="text">Secondary attack: Fire Colt 
+              pistol. </span></p>
+            <p class="text2">Winchester Rifle: </p>
+            <p class="text">Primary: Fire (faster and more accurate when zoomed)</p>
+            <p class="text">Secondary: Zoom In/Out</p>
+            <p class="text2">Thunder Five:</p>
+            <p class="text">Primary: Fire</p>
+            <p class="text">Secondary: N/A</p>
+            <p class="text"><span class="text2">Vampire Claw Attack: </span></p>
+            <p class="unnamed1"><span class="text">Primary: Instant Slayer kill 
+              except arms or legs. </span></p>
+            <p class="unnamed1"><span class="text">Secondary: Use Special Ability. 
+              This can only be used occasionaly. </span></p>
+            <p>&nbsp; </p>
+            <p class="large_text"><span class="text">Rounds/Scoring </span></p>
+            <p class="unnamed1"><span class="text">Under the &quot;Advanced&quot; 
+              properties of Create game you can set how long each round should 
+              last. </span></p>
+            <p class="unnamed1"><span class="text">Under the &quot;Advanced&quot; 
+              properties of Create game you can set two values to determine when 
+              the map change in VS should occur. </span></p>
+            <p class="unnamed1"><span class="text">'Time Limit' determines how 
+              long a map should be played for. However, if 'Round Limit' has a 
+              value assigned, it is the first team to reach this number of wins, 
+              then the map will change and that match is over. </span></p>
+            <p class="unnamed1"><span class="text">If the 'Time Limit' is reached 
+              before either team has managed to reach the 'Round Limit' number 
+              of wins, the map will still change. So, if you plan on using 'Round 
+              Limit' for your games, you can set the 'Time Limit' to a large value 
+              so that you have ample opportunity to reach the required number 
+              of wins. </span></p>
+            <p class="unnamed1"><span class="text">Note: a team has to reach this 
+              number of 'wins', draws do not count. </span></p>
+            <p class="unnamed1"><span class="text">If 'Round Limit' is zero, the 
+              map will change according to the 'Time Limit' setting only. </span></p>
+            <p class="unnamed1"><span class="text">Use the 'timeleft' command 
+              in console to see how long is remaing of the map time when playing. 
+              </span></p>
+            <p class="unnamed1">&nbsp;</p>
+            <p class="text">GameModes:</p>
+            <p class="text">Some maps have objectives that allow your team alternative 
+              method to win the round.</p>
+            <p class="text">Capture the Cross: Maps with _ctc are Capture the 
+              Cross maps. You must steal the oppositions cross and bring it back 
+              to your base. Your cross must be at your base for you to win.</p>
+            <p class="text">Destroy the Coffins/Reliquary: This allows rounds 
+              to be won by destroying certain key objects in the map. The objects, 
+              layout and number of objects to destroy depends on the map. In some 
+              maps only one team has objects to destroy, the other team must defend 
+              them to win.</p>
+            <p class="text">&nbsp;</p>
+            <p class="text">&nbsp;</p>
+            <p class="large_text"><span class="text">Server Commands </span></p>
+            <p class="unnamed1"><span class="text">mp_roundlimit - set the number 
+              of wins required before map change. </span></p>
+            <p class="unnamed1"><span class="text">mp_autobalance - 1 uses team 
+              autobalancing, 0 ignores. </span></p>
+            <p class="unnamed1"><span class="text">mp_friendlyfire - 0 disables, 
+              1 enables. </span></p>
+            <p class="unnamed1"><span class="text">mp_tkkill - 1 enables. If friendly 
+              fire is also on, a TK'er is automatically killed. </span></p>
+            <p class="unnamed1"><span class="text">mp_roundtime - set the time 
+              for each round (only set on server startup) </span></p>
+            <p class="unnamed1"><span class="text">mp_decap - enables or disables 
+              slayer decapitation.</span></p>
+            <p class="unnamed1"><span class="text">mp_decaptime - set the time 
+              the head stays around for (default 60secs)</span></p>
+            <p class="unnamed1"><span class="text">You can limit the number of 
+              players using a particular character with the following commands, 
+              supplying the number of the max limit:</span></p>
+            <p class="unnamed1"><span class="text">mp_maxmolly #</span></p>
+            <p class="unnamed1"><span class="text">mp_maxfatherd #</span></p>
+            <p class="text">mp_maxeightball #</p>
+            <p class="unnamed1"><span class="text">mp_maxlouis #</span></p>
+            <p class="unnamed1"><span class="text">mp_maxedgar #</span></p>
+            <p class="unnamed1"><span class="text">mp_maxnina #</span></p>
+            <p>sv_restart - restart round</p>
+            <p>cl_numgibs</p>
+            <p>cl_burngibs<br>
+            </p>
+            <p>cl_burntime<br>
+            </p>
+            <p>cl_burnrate<br>
+            </p>
+            <p>cl_reloadefx<br>
+            </p>
+            <p>cl_enableefx<br>
+            </p>
+            <p>cl_smokepuffs<br>
+            </p>
+            <p>cl_bulletsparks</p>
+            <p>&nbsp;</p>
+          </td>
+        </tr>
+        <tr> 
+          <td height="1046"></td>
+        </tr>
+      </table>
+      <!-- #EndEditable --></td>
+    <td width="8" valign="top"> <!-- #BeginEditable "right1" --> 
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000000">
+        <tr> 
+          <td width="8" height="1266"></td>
+        </tr>
+      </table>
+      <!-- #EndEditable --></td>
+    <td width="128" valign="top" background="Templates/cf_m_mrbl1.jpg"> 
+      <!-- #BeginEditable "right" --> 
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" background="Templates/cf_m_mrbl1.jpg" height="1198">
+        <tr> 
+          <td width="128" height="1262"></td>
+        </tr>
+      </table>
+      <!-- #EndEditable --></td>
+  </tr>
+  <tr bgcolor="#330000" valign="middle"> 
+    <td height="31" colspan="5"> 
+      <div align="center"><font face="Verdana, Arial, Helvetica, sans-serif" color="#FF9900" size="1">Half-Life: 
+        Vampire Slayer the Modification Copyright Mark Gornall 2001. All Rights 
+        Reserved.</font></div>
+    </td>
+  </tr>
+</table>
+<!-- #BeginEditable "sfx" --><!-- #EndEditable --> 
+</body>
+<!-- #EndTemplate -->
+</html>

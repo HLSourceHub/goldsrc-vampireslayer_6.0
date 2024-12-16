@@ -1,0 +1,14 @@
+// overview description file for vs_bitten.bsp
+
+global 
+{
+	ZOOM	1.43
+	ORIGIN	-163.13 -248 -580
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_bitten.bmp"
+	HEIGHT	-380
+}

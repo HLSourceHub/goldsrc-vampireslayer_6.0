@@ -1,0 +1,14 @@
+// overview description file for vs_blizzard.bsp
+
+global 
+{
+	ZOOM	2.31
+	ORIGIN	-784.00 	876.00   552.00
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_blizzard.bmp"
+	HEIGHT	-50
+}

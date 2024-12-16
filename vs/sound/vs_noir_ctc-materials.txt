@@ -1,0 +1,11 @@
+//Add the following lines to your materials.txt file, if so desired
+
+//vs_noir_ctc
+
+T vsnoir08
+T nrmlotile16
+T asphalt02
+T nrwall
+W nrwood
+D out_dirt1bw
+Y nrglasslight

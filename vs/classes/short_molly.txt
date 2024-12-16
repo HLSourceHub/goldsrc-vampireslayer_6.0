@@ -1,0 +1,18 @@
+CLASS: Slayer
+
+WEAPONS:	
+
+STAKE AND COLT GOVERNMENT PISTOL
+MICRO-UZI
+CROSSBOW
+
+HOW TO PLAY:
+
+Knock the Vampires down then stake them using the
+primary attack with the STAKE AND COLT weapon
+selected. Alternatively, kill Vampires using the
+stakes fired from the CROSSBOW. Aim for the heart!
+To change team press ENTER whilst dead.
+
+QUOTE: "Vampire slaying is my life, 
+	and theirs hopefully!"

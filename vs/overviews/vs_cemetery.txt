@@ -1,0 +1,14 @@
+// overview description file for vs_cemetery.bsp
+
+global 
+{
+	ZOOM	1.61
+	ORIGIN	1640.81 -500.56	-281
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_cemetery.bmp"
+	HEIGHT	-281
+}

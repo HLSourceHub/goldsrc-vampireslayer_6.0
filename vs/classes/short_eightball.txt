@@ -1,0 +1,17 @@
+CLASS: Slayer
+
+WEAPONS:
+
+POOL CUE
+THUNDER5
+WINCHESTER RIFLE
+
+HOW TO PLAY:
+
+ Knock Vampires down using the thunder5 or rifle then stake
+the body using the pool cue to kill them completely. 
+ Use the secondary attack with pool cue to knock vampires
+away.
+ Use secondary attack on rifle to zoom.
+ To change team press M (default) or ENTER whilst dead.
+

@@ -1,0 +1,14 @@
+
+
+global 
+{
+	ZOOM	2.78
+	ORIGIN	-312.19 -2.34 -178.5
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_torment.bmp"
+	HEIGHT	1000
+}

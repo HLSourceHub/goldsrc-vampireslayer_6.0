@@ -1,0 +1,17 @@
+CLASS: Vampire
+
+HOW TO PLAY:
+
+PRIMARY ATTACK:    Claws
+
+SECONDARY ATTACK:  Sunlight protection
+
+TO LEAP:           RUN + CROUCH + JUMP
+
+TO FEED:           USE key near a corpse
+
+TO CHANGE TEAM:    M (default) or ENTER whilst dead
+
+RESURRECTION IS AUTOMATIC
+
+QUOTE: "I'm up here!"

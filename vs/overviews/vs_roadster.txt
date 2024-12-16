@@ -1,0 +1,14 @@
+// overview description file for vs_roadster.bsp
+
+global 
+{
+	ZOOM	1.13
+	ORIGIN	-512.00   -128.00   769 
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_roadster.bmp"
+	HEIGHT	-500
+}

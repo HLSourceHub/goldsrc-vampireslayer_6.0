@@ -1,0 +1,14 @@
+//overview file for vs_sunrise.bsp
+
+global 
+{
+	ZOOM	1.9
+	ORIGIN	-1037.56 960.0 -609
+	ROTATED	1
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_sunrise.bmp"
+	HEIGHT	-500
+}

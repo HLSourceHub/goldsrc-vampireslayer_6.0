@@ -1,0 +1,13 @@
+
+global 
+{
+	ZOOM	1.01
+	ORIGIN	0.0 -1344.0 -120.0
+	ROTATED	90
+}
+
+layer 
+{
+	IMAGE	"overviews/vs_cloisters_ctc.bmp"
+	HEIGHT	-700
+}

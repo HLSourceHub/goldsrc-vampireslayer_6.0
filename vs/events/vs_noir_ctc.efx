@@ -1,0 +1,23 @@
+Precache {
+;; Sprites
+  model = sprites/fire.spr
+  model = sprites/vssmoke.spr
+}
+
+script clearview {
+  Fog {
+    color = { 171,107,44 }    
+    start = -100
+    end = -150
+    fade = 0.2
+  }  
+}
+
+script cigarfog {
+  Fog {
+    color = { 121,121,121 }    
+    start = 25
+    end = 1000
+    fade = 0.2
+  }  
+}
